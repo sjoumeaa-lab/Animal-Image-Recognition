@@ -1,9 +1,12 @@
-# Animal Recognition System
+# Animal Image Recognition
 
-## Project Description
-This project is an Animal Recognition System developed using Python and PyTorch.
+A computer vision project that classifies animal images into five categories using a Convolutional Neural Network (CNN) built with PyTorch. The project also includes traditional machine learning models for comparative evaluation.
 
-The system uses a Convolutional Neural Network (CNN) to classify animal images into five categories:
+## Project Overview
+
+This project implements an end-to-end image classification workflow, including dataset preparation, model training, evaluation, and image prediction through a graphical user interface.
+
+The system recognizes:
 
 - Butterfly
 - Cat
@@ -13,24 +16,42 @@ The system uses a Convolutional Neural Network (CNN) to classify animal images i
 
 ## Features
 
-- Upload an image through a graphical user interface
-- Display the selected image
-- Predict the animal class
-- Save prediction results to a text file
+- Image dataset preparation and organization
+- CNN-based image classification using PyTorch
+- Comparison with KNN and SVM models
+- Model training and evaluation
+- Graphical user interface for image selection
+- Predicted class display
+- Saving prediction results to a text file
 
 ## Technologies Used
 
 - Python
 - PyTorch
-- Tkinter
+- Scikit-learn
+- NumPy
 - Pillow
+- Tkinter
+- Matplotlib
+- Jupyter Notebook
+
+## Machine Learning Models
+
+### Convolutional Neural Network (CNN)
+Used as the main deep learning model for image classification.
+
+### K-Nearest Neighbors (KNN)
+Implemented as a traditional machine learning baseline.
+
+### Support Vector Machine (SVM)
+Used to compare traditional classification performance with the CNN approach.
 
 ## Project Structure
 
+```text
 AnimalRecognitionProject/
 ├── dataset/
 ├── models/
-│   └── cnn_model.pth
 ├── results/
 │   └── predictions.txt
 ├── ui/
@@ -39,24 +60,8 @@ AnimalRecognitionProject/
 ├── train_cnn.py
 ├── train_knn_svm.py
 ├── prepare_dataset.py
+├── test.py
+├── test_model.py
+├── gpu_test.py
+├── requirements.txt
 └── README.md
-
-## How to Run
-
-1. Open a terminal in the project folder.
-
-2. Run:
-
-python ui\app.py
-
-3. Click "Select Image".
-
-4. Choose an image.
-
-5. The system will display the image and predict the animal.
-
-## Output
-
-Prediction results are stored in:
-
-results/predictions.txt
